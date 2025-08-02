@@ -1,5 +1,12 @@
 -- Pull in the wezterm API
 local wezterm = require("wezterm")
+local mux = wezterm.mux
+
+-- default startup
+wezterm.on("gui-startup", function()
+	local tab, pane, window = mux.spawn_window({})
+	window:gui_window():toggle_fullscreen()
+end)
 
 -- This will hold the configuration.
 local config = wezterm.config_builder()
@@ -7,11 +14,10 @@ local config = wezterm.config_builder()
 config = {
 	automatically_reload_config = true,
 	enable_tab_bar = false,
+
+	-- window
 	window_close_confirmation = "NeverPrompt",
 	window_decorations = "RESIZE",
-	max_fps = 144,
-	animation_fps = 1,
-
 	-- default_prog = { "wsl.exe", "bash", "-c", "source ~/.bashrc; nvim" },
 
 	-- cell
@@ -21,8 +27,6 @@ config = {
 	font_size = 18.0,
 
 	-- cursor
-	default_cursor_style = "BlinkingBlock",
-	cursor_blink_rate = 500,
 	colors = {
 		cursor_bg = "#bfbfbf",
 	},
