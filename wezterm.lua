@@ -9,13 +9,20 @@ config = {
 	enable_tab_bar = false,
 	window_close_confirmation = "NeverPrompt",
 	window_decorations = "RESIZE",
+	max_fps = 144,
+	animation_fps = 1,
 
 	-- default_prog = { "wsl.exe", "bash", "-c", "source ~/.bashrc; nvim" },
 
-	-- font
-	font_size = 14.5,
+	-- cell
+	cell_width = 0.9,
 
-	-- cursor color
+	-- font
+	font_size = 18.0,
+
+	-- cursor
+	default_cursor_style = "BlinkingBlock",
+	cursor_blink_rate = 500,
 	colors = {
 		cursor_bg = "#bfbfbf",
 	},
@@ -47,7 +54,7 @@ config = {
 	window_padding = {
 		left = 10,
 		right = 0,
-		top = 10,
+		top = 0,
 		bottom = 0,
 	},
 }
