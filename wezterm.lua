@@ -25,6 +25,7 @@ config = {
 		bottom = 0,
 	},
 	-- default_prog = { "wsl.exe", "bash", "-c", "source ~/.bashrc; nvim" },
+	default_prog = { "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" },
 
 	-- font
 	font_size = 14.5,
@@ -34,7 +35,7 @@ config = {
 		cursor_bg = "#bfbfbf",
 	},
 
-	window_background_opacity = 0.9,
+	-- window_background_opacity = 0.9,
 	color_scheme = "Tokyo Night",
 }
 
@@ -71,22 +72,22 @@ config.keys = {
 	-- switch between active panes
 	{
 		key = "h",
-		mods = "ALT",
+		mods = "CTRL|ALT",
 		action = act.ActivatePaneDirection("Left"),
 	},
 	{
 		key = "l",
-		mods = "ALT",
+		mods = "CTRL|ALT",
 		action = act.ActivatePaneDirection("Right"),
 	},
 	{
 		key = "j",
-		mods = "ALT",
+		mods = "CTRL|ALT",
 		action = act.ActivatePaneDirection("Down"),
 	},
 	{
 		key = "k",
-		mods = "ALT",
+		mods = "CTRL|ALT",
 		action = act.ActivatePaneDirection("Up"),
 	},
 	{
